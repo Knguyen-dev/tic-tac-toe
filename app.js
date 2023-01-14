@@ -12,16 +12,58 @@ arrays with things such as x's and o's
 it to the DOM, letting the players click on spots on the boards. Don't forget to check
 if a spot on the board was already used.
 
-- Of course spend time first to think about where each function would go so that it all fits together
-
 - Write function or logic that checks when the game is over. Checks for when it's a 3 in a row (win) or 
 a tie
-
-- Let the players put htier names, have a button to already start/restart the game
+- have a button to already start/restart the game
 - Add a display element that congratulates the winning player 
 
 - Optional Challenge: Create an AI so that hte player can play against computer
 1. Start with having it make simple moves
 2. Work on making it smart, you can create an AI using minimix algorithm. You should google 
 this one.
+*/
+
+const playerElements = document.querySelectorAll(".player-el");
+const scoreElements = document.querySelectorAll(".player-score-el");
+const gridSquares = document.querySelectorAll(".grid-square");
+const beginGameBtn = document.querySelector(".begin-game-btn");
+
+const Player = (ID) => {
+  let score = 0;
+  return { ID, score };
+};
+
+let gameBoard = (() => {
+  let currentPlayer = "x";
+  let board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+  return { currentPlayer, board };
+})();
+
+/*
+- function should know who the current player is by accessing the currentPlayer property
+*/
+
+function startGame() {}
+
+/*
+- Mark the board 
+
+
+
+*/
+function markBoard(e) {
+  console.log(gameBoard.currentPlayer);
+}
+
+beginGameBtn.addEventListener("click", startGame);
+
+/*
+- Create the players, whether they are x or o.
+
+- Start the game with the start game button:
+- Calls startGame:
+1. creates click event listeners for all of the grid squares, link to function markBoard
+2. visually indicate that it's player x's turn; (do this with a function)
+3. Show the scores of the players 
 */

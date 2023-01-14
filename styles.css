@@ -82,7 +82,7 @@ header {
   border: 2px solid var(--clr-black);
 }
 
-.current-player {
+.highlight-element {
   color: var(--clr-white);
   background: var(--clr-black);
 }
@@ -118,6 +118,18 @@ if they haven't started the game yet then don't show it */
 }
 .grid-square:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.square-content {
+  transition: var(--transition);
+  opacity: 0;
+}
+.show-square-content {
+  opacity: 1;
+}
+
+/* Going to happen when a spot is already taken  */
+.square-disabled {
+  pointer-events: none;
 }
 
 /* Game button styling */

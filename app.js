@@ -1,4 +1,9 @@
 /*
+
+
+*/
+
+/*
 - Create the game result modal with html and css
 - Then the step after that would be just putting all of the dom elements in grid Info, renaming grid info as docElements or something
 - Continue to try to fit stuff in objects and modules
@@ -93,7 +98,6 @@ function updateScoreElements() {
     }
   });
 }
-
 // Function displays alerts, message parameter is the text that will be alerted to the player
 function displayAlert(message) {
   alertEl.textContent = message;
@@ -102,10 +106,12 @@ function displayAlert(message) {
     alertEl.classList.add("content-hidden");
   }, 3000);
 }
+// Function clears the HTML grid of all player marks
 function clearGrid() {
+  // First loop adds a class that makes it invisible while second loop clears the text in the grid item
   gridInfo.gridSquares.forEach((sqr) => {
     const squareContentEl = sqr.querySelector(".square-content");
-    sqr.classList.remove("show-square-content"); // remove class for a smooth disappearance
+    squareContentEl.classList.remove("show-square-content"); // remove class for a smooth disappearance
     squareContentEl.textContent = "";
   });
 }
@@ -204,7 +210,6 @@ function markBoard(e) {
     displayAlert("Hey that move was invalid! Obviously that spot was already taken.");
   }
 }
-
 // Function is called to display end message
 // Player is the player who won the game
 function endGame(player, is_tie_game) {

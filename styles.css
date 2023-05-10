@@ -52,8 +52,13 @@
   box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+/* Have important so it overrides any display attributes for elements already with a display */
 .content-hidden {
-  display: none;
+  display: none !important;
 }
 
 header {
@@ -130,6 +135,29 @@ if they haven't started the game yet then don't show it */
 /* Going to happen when a spot is already taken  */
 .square-disabled {
   pointer-events: none;
+}
+
+/* Game event message section styling */
+.event-message-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 300px;
+	top: 50%; 
+	right: 10%;
+	padding: 10px 20px;
+	transform: translateY(-50%);
+	width: 200px;
+	height: 80px;
+	background-color: #F5F5F5;
+	z-index: 999;
+	border-radius: 8px;
+	font-family: monospace;
+	font-size: 12px;
+}
+.event-message {
+	text-align: center;
 }
 
 /* Game button styling */

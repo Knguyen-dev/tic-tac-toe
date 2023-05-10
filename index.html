@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My ttt</title>
-    <link rel="stylesheet" href="styles.css" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My ttt</title>
+	<link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Tic-Tac-Toe</h1>
-      <p>Made by the same people who brought you cold pencils</p>
-      <div class="player-container">
-        <p class="player-el" id="player-x">
-          Player X <span class="player-score-el content-hidden" data-id="x">0</span>
-        </p>
-        <p class="player-el" id="player-o">
-          Player O <span class="player-score-el content-hidden" data-id="o">0</span>
-        </p>
-      </div>
-      <div class="alert-container">
-        <p class="alert-el content-hidden"></p>
-      </div>
-    </header>
+	<header>
+	  <h1>Tic-Tac-Toe</h1>
+	  <p>Made by the same people who brought you cold pencils</p>
+	  <div class="player-container">
+		<p class="player-el" id="player-x">
+		  Player X <span class="player-score-el content-hidden" data-id="x">0</span>
+		</p>
+		<p class="player-el" id="player-o">
+		  Player O <span class="player-score-el content-hidden" data-id="o">0</span>
+		</p>
+	  </div>
+	  <!-- <div class="alert-container">
+		<p class="alert-el content-hidden"></p>
+	  </div> -->
+	</header>
 
-    <section class="main-section">
-      <section class="playing-grid"></section>
+	<section class="main-section">
+	  <section class="playing-grid"></section>
 
-      <div class="game-btn-container">
-        <button class="game-btn" id="reset-game-btn">Reset Game</button>
-        <button class="game-btn" id="begin-game-btn">Start Game</button>
-      </div>
-      <!-- <
-        button class="begin-game-btn">Start Game</button> -->
-    </section>
+	  <div class="game-btn-container">
+		<button class="game-btn" id="reset-game-btn">Reset Game</button>
+		<button class="game-btn" id="begin-game-btn">Start Game</button>
+	  </div>
+		
+	</section>
 
-    <section class="game-result-modal">
-      <h1>Main game result</h1>
-      <p>Smaller game result that has a longer description</p>
-    </section>
+	<section class="event-message-section content-hidden">
+		<h1 class="event-message"></h1>
+	</section>
 
-    <footer>
-      <p>
-        Copyright &copy; Kevin Nguyen
-        <span id="date">'Some date'</span>. some rights reserved
-      </p>
-    </footer>
-    <script src="app.js"></script>
+
+	<footer>
+	  <p>
+		Copyright &copy; Kevin Nguyen
+		<span id="date">'Some date'</span>. some rights reserved
+	  </p>
+	</footer>
+	<script src="app.js"></script>
   </body>
 </html>
-11
